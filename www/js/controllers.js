@@ -1,19 +1,32 @@
 angular.module('starter.controllers', [])
 
 .controller('DeskCtrl', function($scope) {
+    $scope.desk = 1;
+    //cash, mobile, pin
+    $scope.method = "mobile";
+
+    //var ble = new bluenet();
+    //var bleInitialized = false;
+
+    /*ble.init(function successCB() {
+            bleInitialized = true;
+        },
+        function errorCB() {
+            bleInitialized = false;
+        }
+    );
+
+    $scope.bleInitialized = bleInitialized;*/
 
 })
 
 .controller('CrowdCtrl', function($scope) {
-    $scope.graph = {};                        // Empty graph object to hold the details for this graph
-    $scope.graph.data = [                     // Add bar data, this will set your bars height in the graph
-        //Awake
-        [16, 15, 20, 12, 16, 12, 8],
-        //Asleep
-        [8, 9, 4, 12, 8, 12, 14]
+    $scope.labels = ["10:00", "11:00", "11:35", "11:40", "12:00", "13:00", "14:00"];
+    $scope.series = ['Mijn kassa', 'Gehele winkel'];
+    $scope.data = [
+        [65, 59, 80, 81, 56, 55, 40],
+        [28, 48, 40, 19, 86, 27, 90]
     ];
-    $scope.graph.labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];    // Add labels for the X-axis
-    $scope.graph.series = ['Awake', 'Asleep'];  // Add information for the hover/touch effect
 })
 
 /*.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
