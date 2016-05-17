@@ -1939,6 +1939,9 @@ var BleExt = (function () {
             // TODO: variable number of orguments: use "arguments.length" and successCB.apply(successCB, args)
             // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
             // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
+            // TODO: variable number of orguments: use "arguments.length" and successCB.apply(successCB, args)
+            // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
+            // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
             function (arg) {
                 callback();
                 if (successCB)
