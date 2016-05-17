@@ -4,20 +4,6 @@ angular.module('starter.controllers', [])
     $scope.desk = 1;
     //cash, mobile, pin
     $scope.method = "mobile";
-
-    //var ble = new bluenet();
-    //var bleInitialized = false;
-
-    /*ble.init(function successCB() {
-            bleInitialized = true;
-        },
-        function errorCB() {
-            bleInitialized = false;
-        }
-    );
-
-    $scope.bleInitialized = bleInitialized;*/
-
 })
 
 .controller('CrowdCtrl', function($scope) {
