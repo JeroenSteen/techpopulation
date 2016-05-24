@@ -1,0 +1,3 @@
+<?php
+
+//Rename cash registers

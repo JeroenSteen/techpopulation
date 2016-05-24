@@ -54,26 +54,6 @@ angular.module('starter', [
             }
         })
 
-        .state('tab.crowd', {
-            url: '/crowd',
-            views: {
-                'tab-crowd': {
-                    templateUrl: 'templates/tab-crowd.html',
-                    controller: 'CrowdCtrl'
-                }
-            }
-        })
-
-        /*.state('tab.chat-detail', {
-         url: '/chats/:chatId',
-         views: {
-         'tab-chats': {
-         templateUrl: 'templates/chat-detail.html',
-         controller: 'SettingsCtrl'
-         }
-         }
-         })*/
-
         .state('tab.settings', {
             url: '/settings',
             views: {

@@ -12,8 +12,12 @@ document.addEventListener("deviceready", function () {
         }
     );
 
-    console.log(bleInitialized);
-    console.log(ble.devices());
+    ble.startScan();
+
+    var devices = ble.devices;
+    console.log(devices);
+    //console.log(ble.readDeviceName());
+
 
 }, true);
 
