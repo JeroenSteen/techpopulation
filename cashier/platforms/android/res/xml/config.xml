@@ -29,6 +29,9 @@
     <feature name="BluetoothLePlugin">
         <param name="android-package" value="com.randdusing.bluetoothle.BluetoothLePlugin" />
     </feature>
+    <feature name="Vibration">
+        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+    </feature>
     <icon density="ldpi" src="resources\android\icon\drawable-ldpi-icon.png" />
     <icon density="mdpi" src="resources\android\icon\drawable-mdpi-icon.png" />
     <icon density="hdpi" src="resources\android\icon\drawable-hdpi-icon.png" />
@@ -55,6 +58,8 @@
     Jeroen van der Steen
   </author>
     <content src="index.html" />
+    <allow-navigation href="*" />
+    <allow-intent href="*" />
     <access origin="*" />
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />

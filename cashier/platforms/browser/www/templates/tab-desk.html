@@ -6,18 +6,26 @@
             <div class="item item-avatar">
                 <img src="img/identity_red.png">
                 <h2>Welkom, Jeroen!</h2>
-                <p>Pin kassa 6</p>
+                <p>Pin kassa {{desk}}</p>
             </div>
 
             <div class="item item-body">
-                <img class="full-image" src="img/contant_betalen.jpg">
+                <div ng-if="method == 'cash'">
+                    <img class="full-image" src="img/contant_betalen.jpg">
+                </div>
+                <div ng-if="method == 'mobile'">
+                    <img class="full-image" src="img/mobiel_betalen.jpg">
+                </div>
+                <div ng-if="method == 'pin'">
+                    <img class="full-image" src="img/pin_betalen.gif">
+                </div>
             </div>
 
             <div class="item item-icon-left">
                 <i class="icon ion-alert-circled"></i>
                 <i class="icon ion-checkmark-circled"></i>
                 <strong>
-                    U bent opgeroepen voor Pin kassa 6.
+                    U bent opgeroepen voor Pin kassa {{desk}}.
                 </strong>
             </div>
 

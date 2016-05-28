@@ -33,6 +33,9 @@
         },
         "com.randdusing.bluetoothle": {
             "PACKAGE_NAME": "com.ionicframework.tech964566"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.ionicframework.tech964566"
         }
     },
     "dependent_plugins": {}

@@ -1,22 +1,18 @@
 angular.module('starter.controllers', [])
 
 .controller('DeskCtrl', function($scope) {
-
+    $scope.desk = 1;
+    //cash, mobile, pin
+    $scope.method = "mobile";
 })
 
-.controller('CrowdCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
-
-  /*$scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };*/
+.controller('CrowdCtrl', function($scope) {
+    $scope.labels = ["10:00", "11:00", "11:35", "11:40", "12:00", "13:00", "14:00"];
+    $scope.series = ['Mijn kassa', 'Gehele winkel'];
+    $scope.data = [
+        [65, 59, 80, 81, 56, 55, 40],
+        [28, 48, 40, 19, 86, 27, 90]
+    ];
 })
 
 /*.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {

@@ -84,6 +84,24 @@ module.exports = [
         "clobbers": [
             "window.bluetoothle"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-vibration/www/vibration.js",
+        "id": "cordova-plugin-vibration.notification",
+        "pluginId": "cordova-plugin-vibration",
+        "merges": [
+            "navigator.notification",
+            "navigator"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-vibration/src/browser/Vibration.js",
+        "id": "cordova-plugin-vibration.Vibration",
+        "pluginId": "cordova-plugin-vibration",
+        "merges": [
+            "navigator.notification",
+            "navigator"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -97,7 +115,8 @@ module.exports.metadata =
     "ionic-plugin-keyboard": "2.2.0",
     "nl.dobots.bluenet": "0.1.7",
     "cordova-plugin-dialogs": "1.2.1",
-    "com.randdusing.bluetoothle": "2.1.0"
+    "com.randdusing.bluetoothle": "2.1.0",
+    "cordova-plugin-vibration": "2.1.1"
 }
 // BOTTOM OF METADATA
 });

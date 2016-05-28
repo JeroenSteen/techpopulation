@@ -39,6 +39,10 @@
                         {
                             "xml": "<feature name=\"BluetoothLePlugin\"><param name=\"android-package\" value=\"com.randdusing.bluetoothle.BluetoothLePlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Vibration\"><param name=\"android-package\" value=\"org.apache.cordova.vibration.Vibration\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -53,6 +57,10 @@
                         {
                             "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\" />",
                             "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -85,6 +93,9 @@
             "PACKAGE_NAME": "com.ionicframework.tech964566"
         },
         "com.randdusing.bluetoothle": {
+            "PACKAGE_NAME": "com.ionicframework.tech964566"
+        },
+        "cordova-plugin-vibration": {
             "PACKAGE_NAME": "com.ionicframework.tech964566"
         }
     },
@@ -146,6 +157,14 @@
             "clobbers": [
                 "window.bluetoothle"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-vibration/www/vibration.js",
+            "id": "cordova-plugin-vibration.notification",
+            "merges": [
+                "navigator.notification",
+                "navigator"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -157,6 +176,7 @@
         "ionic-plugin-keyboard": "2.2.0",
         "nl.dobots.bluenet": "0.1.7",
         "cordova-plugin-dialogs": "1.2.1",
-        "com.randdusing.bluetoothle": "2.1.0"
+        "com.randdusing.bluetoothle": "2.1.0",
+        "cordova-plugin-vibration": "2.1.1"
     }
 }
