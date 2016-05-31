@@ -8,26 +8,25 @@ function wait(ms){
   }
 }
 
-function countDevices(devices) {
-    var count = 0;
-    for(var i = 0; i < devices.length; ++i){
-        if(devices[i] == 2)
-            count++;
-    }
-    return count;
-}
-
 function searchCrownstones(ble) {
     ble.startScan();
-    wait(10000); //Wait 10 seconds
-    ble.stopScan();
+    searchInterval = setInterval(
+        function() {
+            ble.stopScan(function() {
+                ble.startScan(function(){
 
-    if(countDevices(ble.devices) == 0) {
-        console.log("No devices");
-        //searchCrownstones(ble);
-    } else {
-        console.log("Devices found");
-    }
+                    if(ble.devices.devices.length == 0) {
+                        console.log("No devices");
+                        //searchCrownstones(ble);
+                    } else {
+                        console.log("Devices found");
+                        clearInterval(searchInterval);
+                        ble.stopScan();
+                    }
+
+                })
+            })
+        }, 1000);
 }
 
 document.addEventListener("deviceready", function () {
@@ -42,11 +41,16 @@ document.addEventListener("deviceready", function () {
         }
     );
 
-    searchCrownstones(ble);
+    //Time to init.. 20 seconds
+    wait(20000);
 
-    var devices = ble.devices;
-    console.log(devices);
+    //5 seconds
+    //var searchCrownstonesInterval = setInterval(searchCrownstones(ble), 1000);
+    searchCrownstones(ble);
+    console.log(ble.devices.devices.length);
+
     //console.log(ble.readDeviceName());
+    //ble.writeDeviceName()
 
     $.support.cors = true;
     $.ajax({
@@ -63,7 +67,7 @@ document.addEventListener("deviceready", function () {
                     console.log(data.pay_method);
                     console.log(data.num_customers);
 
-                    navigator.vibrate(6000);
+                    navigator.vibrate(3000);
 
                     return;
                 }
