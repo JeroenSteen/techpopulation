@@ -9,7 +9,7 @@
                 <p>Pin kassa {{desk}}</p>
             </div>
 
-            <div class="item item-body">
+            <div class="item item-body" ng-if="method != null">
                 <div ng-if="method == 'cash'">
                     <img class="full-image" src="img/contant_betalen.jpg">
                 </div>
@@ -21,9 +21,8 @@
                 </div>
             </div>
 
-            <div class="item item-icon-left">
+            <div class="item item-icon-left" ng-if="desk != null">
                 <i class="icon ion-alert-circled"></i>
-                <i class="icon ion-checkmark-circled"></i>
                 <strong>
                     U bent opgeroepen voor Pin kassa {{desk}}.
                 </strong>

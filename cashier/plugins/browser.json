@@ -36,6 +36,9 @@
         },
         "cordova-plugin-vibration": {
             "PACKAGE_NAME": "com.ionicframework.tech964566"
+        },
+        "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "com.ionicframework.tech964566"
         }
     },
     "dependent_plugins": {}

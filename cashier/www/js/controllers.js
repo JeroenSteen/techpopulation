@@ -1,9 +1,36 @@
 angular.module('starter.controllers', [])
 
 .controller('DeskCtrl', function($scope) {
-    $scope.desk = 1;
-    //cash, mobile, pin
-    $scope.method = "mobile";
+
+  $scope.desk = null;
+  $scope.method = null;
+  $scope.customers = null;
+
+  //Cashier needs to go to register
+  $.support.cors = true;
+    $.ajax({
+        dataType: "json",
+        url: "http://www.jeroensteen.nl/techpopulation/get_customers_at_cash_registers.php",
+        success: function(customers_at_cash_registers) {
+            for (c = 0; c < customers_at_cash_registers.length; c++) {
+
+                //Crowded
+                if(customers_at_cash_registers[c].crowded) {
+                    var data = customers_at_cash_registers[c];
+
+                    $scope.desk = data.cash_register_id;
+                    //cash, mobile, pin
+                    $scope.method = data.pay_method;
+                    $scope.customers = data.num_customers;
+
+                    repeatVibrate(3000);
+
+                    break;
+                }
+            }
+        }
+    });
+
 })
 
 .controller('CrowdCtrl', function($scope) {
