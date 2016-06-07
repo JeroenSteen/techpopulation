@@ -17,11 +17,17 @@ $min_customers = 0;
 //Maximum chance of waiting customers at cash register
 $max_customers = 15;
 
+function sum($numbers) {
+    $total = 0;
+    foreach($numbers as $number) $total += $number;
+    return $total;
+}
+
 //Simulate cash registers
 for($c = 1; $c <= $num_cash_registers; $c++) {
     //First paymethod cash register
     if (in_array($c, [1,4,7])) {
-        $num_customers = rand($min_customers,$max_customers);
+        $num_customers = rand($min_customers, $max_customers);
         $is_crowded = ($num_customers >= $max_allowed_customers) ? true : false;
 
         $cash_registers[] = [
@@ -33,7 +39,7 @@ for($c = 1; $c <= $num_cash_registers; $c++) {
     }
     //Second paymethod cash register
     if (in_array($c, [2,5,8])) {
-        $num_customers = rand($min_customers,$max_customers);
+        $num_customers = rand($min_customers,sum([$max_customers, rand(0,5)]) );
         $is_crowded = ($num_customers >= $max_allowed_customers) ? true : false;
 
         $cash_registers[] = [
@@ -45,7 +51,7 @@ for($c = 1; $c <= $num_cash_registers; $c++) {
     }
     //Third paymethod cash register
     if (in_array($c, [3,6,9])) {
-        $num_customers = rand($min_customers,$max_customers);
+        $num_customers = rand($min_customers, $max_customers);
         $is_crowded = ($num_customers >= $max_allowed_customers) ? true : false;
 
         $cash_registers[] = [

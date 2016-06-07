@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Bitnami\wampstack-7.0.0-0\apache2\htdocs\techpopulation\cashier\platforms\android\CordovaLib\src\main\jniLibs"/></dataSet><dataSet config="release"><source path="C:\Bitnami\wampstack-7.0.0-0\apache2\htdocs\techpopulation\cashier\platforms\android\CordovaLib\src\release\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Users\Jeroen\Desktop\techpopulation\cashier\platforms\android\CordovaLib\src\main\jniLibs"/></dataSet><dataSet config="release"><source path="C:\Users\Jeroen\Desktop\techpopulation\cashier\platforms\android\CordovaLib\src\release\jniLibs"/></dataSet></merger>

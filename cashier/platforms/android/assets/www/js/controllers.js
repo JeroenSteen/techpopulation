@@ -12,22 +12,41 @@ angular.module('starter.controllers', [])
         dataType: "json",
         url: "http://www.jeroensteen.nl/techpopulation/get_customers_at_cash_registers.php",
         success: function(customers_at_cash_registers) {
+          var total_customers = 0; //Total of customers
+          var total_crowds = 0; //Number of crowded cash registers
+          for (c = 0; c < customers_at_cash_registers.length; c++) {
+            if(customers_at_cash_registers[c].crowded) {
+              total_customers += customers_at_cash_registers[c].num_customers;
+              total_crowds++;
+            }
+          }
+          console.log(total_customers);
+          console.log(total_crowds);
+
+          //Mean of customers at cash registers: total customers / total crowds
+          var max_allowed_customers = 5;
+          //Crowded in general
+          if( (total_customers / total_crowds) > max_allowed_customers) {
+
             for (c = 0; c < customers_at_cash_registers.length; c++) {
 
-                //Crowded
-                if(customers_at_cash_registers[c].crowded) {
-                    var data = customers_at_cash_registers[c];
+              //Crowded at certain cash register
+              if(customers_at_cash_registers[c].crowded) {
+                  var data = customers_at_cash_registers[c];
 
-                    $scope.desk = data.cash_register_id;
-                    //cash, mobile, pin
-                    $scope.method = data.pay_method;
-                    $scope.customers = data.num_customers;
+                  $scope.desk = data.cash_register_id;
+                  //cash, mobile, pin
+                  $scope.method = data.pay_method;
+                  $scope.customers = data.num_customers;
 
-                    repeatVibrate(3000);
+                  repeatVibrate(3000);
 
-                    break;
-                }
+                  break;
+              }
             }
+
+          }
+
         }
     });
 
