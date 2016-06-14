@@ -3,9 +3,9 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>Techpopulation</name>
+    <name>Techpopulation Customer</name>
     <description>
-    Techpopulation helps staff and customers of retail.
+    Techpopulation Customer helps staff and customers of retail.
   </description>
     <author email="info@jeroensteen.nl" href="http://jeroensteen.nl/">
     Jeroen van der Steen

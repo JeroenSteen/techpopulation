@@ -4,17 +4,17 @@
         <div class="list card">
 
             <div class="item item-body item-thumbnail-left">
-                <ion-toggle ng-model="payCash" toggle-class="toggle-calm">
+                <ion-toggle ng-model="payCash" ng-change="changeCash()" toggle-class="toggle-calm">
                     <img src="img/contant_betalen.jpg" width="50%">
                 </ion-toggle>
             </div>
             <div class="item item-body item-thumbnail-left">
-                <ion-toggle ng-model="payMobile" toggle-class="toggle-calm">
+                <ion-toggle ng-model="payMobile" ng-change="changeMobile()" toggle-class="toggle-calm">
                     <img src="img/mobiel_betalen.jpg" width="50%">
                 </ion-toggle>
             </div>
             <div class="item item-body item-thumbnail-left">
-                <ion-toggle ng-model="payPin" toggle-class="toggle-calm">
+                <ion-toggle ng-model="payPin" ng-change="changePin()" toggle-class="toggle-calm">
                     <img src="img/pin_betalen.gif" width="50%">
                 </ion-toggle>
             </div>

@@ -39,6 +39,10 @@
                         {
                             "xml": "<feature name=\"BluetoothLePlugin\"><param name=\"android-package\" value=\"com.randdusing.bluetoothle.BluetoothLePlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppPreferences\"><param name=\"android-package\" value=\"me.apla.cordova.AppPreferences\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -53,6 +57,12 @@
                         {
                             "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\" />",
                             "count": 2
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:name=\"me.apla.cordova.AppPreferencesActivity\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -85,6 +95,9 @@
             "PACKAGE_NAME": "com.ionicframework.tech964566"
         },
         "com.randdusing.bluetoothle": {
+            "PACKAGE_NAME": "com.ionicframework.tech964566"
+        },
+        "cordova-plugin-app-preferences": {
             "PACKAGE_NAME": "com.ionicframework.tech964566"
         }
     },
@@ -146,6 +159,13 @@
             "clobbers": [
                 "window.bluetoothle"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-app-preferences/www/apppreferences.js",
+            "id": "cordova-plugin-app-preferences.apppreferences",
+            "clobbers": [
+                "plugins.appPreferences"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -157,6 +177,7 @@
         "ionic-plugin-keyboard": "2.2.0",
         "nl.dobots.bluenet": "0.1.7",
         "cordova-plugin-dialogs": "1.2.1",
-        "com.randdusing.bluetoothle": "2.1.0"
+        "com.randdusing.bluetoothle": "2.1.0",
+        "cordova-plugin-app-preferences": "0.7.7"
     }
 }

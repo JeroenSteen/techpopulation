@@ -1,24 +1,17 @@
-<ion-view view-title="Mijn kassa">
+<ion-view view-title="Kortste wachtrij">
     <ion-content class="padding">
 
         <div class="list card">
 
-            <div class="item item-avatar">
-                <img src="img/identity_red.png">
-                <h2>Welkom, Jeroen!</h2>
-                <p>Pin kassa 6</p>
-            </div>
+            <div class="item item-thumbnail-left">
+                <img ng-if="method == 'cash'" src="img/contant_betalen.jpg">
 
-            <div class="item item-body">
-                <img class="full-image" src="img/contant_betalen.jpg">
-            </div>
+                <img ng-if="method == 'mobile'" src="img/mobiel_betalen.jpg">
 
-            <div class="item item-icon-left">
-                <i class="icon ion-alert-circled"></i>
-                <i class="icon ion-checkmark-circled"></i>
-                <strong>
-                    U bent opgeroepen voor Pin kassa 6.
-                </strong>
+                <img ng-if="method == 'pin'" src="img/pin_betalen.gif">
+
+                <h2>Pin kassa {{desk}}</h2>
+                <p>20 klanten in wachtrij</p>
             </div>
 
         </div>

@@ -1,13 +1,25 @@
 <ion-view view-title="Instellingen">
-    <ion-content>
-        <ion-list>
-            <ion-toggle  ng-model="settings.enableFriends">
-                Enable Friends
-            </ion-toggle>
-        </ion-list>
-        <label class="item item-input">
-            <i class="icon ion-search placeholder-icon"></i>
-            <input type="text" placeholder="Search">
-        </label>
+    <ion-content class="padding">
+
+        <div class="list card">
+
+            <div class="item item-body item-thumbnail-left">
+                <ion-toggle ng-model="payCash" toggle-class="toggle-calm">
+                    <img src="img/contant_betalen.jpg" width="50%">
+                </ion-toggle>
+            </div>
+            <div class="item item-body item-thumbnail-left">
+                <ion-toggle ng-model="payMobile" toggle-class="toggle-calm">
+                    <img src="img/mobiel_betalen.jpg" width="50%">
+                </ion-toggle>
+            </div>
+            <div class="item item-body item-thumbnail-left">
+                <ion-toggle ng-model="payPin" toggle-class="toggle-calm">
+                    <img src="img/pin_betalen.gif" width="50%">
+                </ion-toggle>
+            </div>
+
+        </div>
+
     </ion-content>
 </ion-view>

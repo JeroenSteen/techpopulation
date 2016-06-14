@@ -18,8 +18,6 @@
 //console.log(bl);
 //console.log(bl.listDevices());
 
-console.log(new Bluenet());
-
 /*var bleInitialized = false;
 
 ble.init(function successCB() {

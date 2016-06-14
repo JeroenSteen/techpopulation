@@ -56,6 +56,13 @@ module.exports = [
         "clobbers": [
             "window.bluetoothle"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-app-preferences/www/apppreferences.js",
+        "id": "cordova-plugin-app-preferences.apppreferences",
+        "clobbers": [
+            "plugins.appPreferences"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -69,7 +76,8 @@ module.exports.metadata =
     "ionic-plugin-keyboard": "2.2.0",
     "nl.dobots.bluenet": "0.1.7",
     "cordova-plugin-dialogs": "1.2.1",
-    "com.randdusing.bluetoothle": "2.1.0"
+    "com.randdusing.bluetoothle": "2.1.0",
+    "cordova-plugin-app-preferences": "0.7.7"
 };
 // BOTTOM OF METADATA
 });
