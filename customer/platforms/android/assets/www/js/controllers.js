@@ -1,3 +1,11 @@
+function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
+}
+
 angular.module('starter.controllers', [])
 
 .controller('DeskCtrl', function($scope) {
@@ -11,20 +19,35 @@ angular.module('starter.controllers', [])
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
 
-      function ok (val) { console.log("Ok: "+val) }
-      function fail (error) { console.log("Err: "+error) }
+      function ok (val) { console.log("Okkkkkkkk: "+val); return val; }
+      function fail (error) { console.log("Errrrrrr: "+error) }
 
       var prefs = window.plugins.appPreferences;
       //Store default pay method settings
       //prefs.remove("payCash"); prefs.remove("payMobile"); prefs.remove("payPin");
-      console.log(prefs.fetch(ok, fail, "payCash"));
-      //if(prefs.fetch("payCash") == null) storage.setItem("payCash", "false");
-      //if(storage.getItem("payMobile") == null) storage.setItem("payMobile", "false");
-      //if(storage.getItem("payPin") == null) storage.setItem("payPin", "false");
+      
+      if(prefs.fetch(ok, fail, "payCash") == undefined) {
+        console.log("payCash is undefined");
+        prefs.store(ok, fail, "payCash", false);
+      }
 
-      //console.log( prefs.fetch (ok, fail, 'keyo') );
-      //prefs.store(ok, fail, 'keyo', 'valueo');
-      //console.log( prefs.fetch (ok, fail, 'keyo') );
+      if(prefs.fetch(ok, fail, "payMobile") == undefined) {
+        console.log("payMobile is undefined");
+        prefs.store(ok, fail, "payMobile", false);
+      }
+      
+      if(prefs.fetch(ok, fail, "payPin") == undefined) {
+        console.log("payPin is undefined");
+        prefs.store(ok, fail, "payPin", false);
+      }
+
+      wait(300);
+      //var payCash = prefs.fetch(ok, fail, "payCash");
+      //console.log("payCash: "+payCash);
+      //var payMobile = prefs.fetch(ok, fail, "payMobile");
+      //console.log("payMobile: "+payMobile);
+      var payPin = prefs.fetch(ok, fail, "payPin");
+      console.log("payPinnnnn: "+payPin);
 
       navigator.notification.alert(
         "Ga naar kassa: "+desk,
