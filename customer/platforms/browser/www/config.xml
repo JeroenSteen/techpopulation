@@ -11,6 +11,8 @@
     Jeroen van der Steen
   </author>
     <content src="index.html" />
+    <allow-navigation href="*" />
+    <allow-intent href="*" />
     <access origin="*" />
     <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
     <preference name="webviewbounce" value="false" />

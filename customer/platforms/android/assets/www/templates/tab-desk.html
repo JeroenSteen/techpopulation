@@ -10,8 +10,8 @@
 
                 <img ng-if="method == 'pin'" src="img/pin_betalen.gif">
 
-                <h2>Pin kassa {{desk}}</h2>
-                <p>20 klanten in wachtrij</p>
+                <h2>{{method | uppercase}} kassa {{desk}}</h2>
+                <p>{{num_customers}} klanten in wachtrij</p>
             </div>
 
         </div>

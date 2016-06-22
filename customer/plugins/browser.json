@@ -19,9 +19,6 @@
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.ionicframework.tech964566"
         },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ionicframework.tech964566"
-        },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.tech964566"
         },
@@ -35,6 +32,9 @@
             "PACKAGE_NAME": "com.ionicframework.tech964566"
         },
         "cordova-plugin-app-preferences": {
+            "PACKAGE_NAME": "com.ionicframework.tech964566"
+        },
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.ionicframework.tech964566"
         }
     },

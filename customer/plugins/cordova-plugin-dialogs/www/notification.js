@@ -108,5 +108,6 @@ module.exports = {
     beep: function(count) {
         var defaultedCount = count || 1;
         exec(null, null, "Notification", "beep", [ defaultedCount ]);
-    }
+    },
+
 };
