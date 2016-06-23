@@ -80,7 +80,7 @@ angular.module('starter.controllers', [])
                                 var num_customers = customers_at_cash_registers[cc].num_customers;
                                 var crowded = customers_at_cash_registers[cc].crowded;
 
-                                if (!crowded && getPaySetting(String(pay_method))) {
+                                if (/*!crowded &&*/ getPaySetting(String(pay_method))) {
                                     console.log("User wants pay method: " + pay_method + " " + getPaySetting(String(pay_method)));
                                     console.log("Not crowded at cash register: " + cash_register_id + ", with pay method: " + pay_method + " and " + num_customers + " customers in line.");
                                     //Amount of customers is lesser
@@ -98,7 +98,7 @@ angular.module('starter.controllers', [])
                                 var num_customers = customers_at_cash_registers[cc].num_customers;
                                 var crowded = customers_at_cash_registers[cc].crowded;
 
-                                if (!crowded && getPaySetting(String(pay_method)) && num_customers == less_customers) {
+                                if (/*!crowded &&*/ getPaySetting(String(pay_method)) && num_customers == less_customers) {
 
                                     $scope.desk = cash_register_id;
                                     //cash, mobile, pin
@@ -107,12 +107,12 @@ angular.module('starter.controllers', [])
                                     $scope.num_customers = num_customers;
                                     $scope.$apply();
 
-                                    navigator.notification.alert(
+                                    /*navigator.notification.alert(
                                         "Ga naar "+payMethodShort+" kassa: " + cash_register_id,
                                         function () {
                                         },
                                         "Kortste wachtrij!",
-                                        "OK");
+                                        "OK");*/
                                 }
                             }
 
