@@ -11,7 +11,7 @@ function repeatVibrate(amount) {
   for(r = 0; r < 5; r++) {
     navigator.vibrate(amount);
     //10 seconds
-    wait(10000);
+    //wait(10000);
   }
 
 }
